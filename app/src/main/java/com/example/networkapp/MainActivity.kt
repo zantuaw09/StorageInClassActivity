@@ -58,7 +58,7 @@ class MainActivity : AppCompatActivity() {
                 while (br.readLine().also { line = it } != null) {
                     jsonText.append(line)
                 }
-
+                br.close()
                 showComic(JSONObject(jsonText.toString()))
 
             } catch (e: IOException) {
